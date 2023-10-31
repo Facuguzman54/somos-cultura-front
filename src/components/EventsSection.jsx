@@ -7,7 +7,7 @@ export const EventsSection = () => {
             <h3 className="text-center text-2xl font-bold mb-4">Todos los eventos</h3>
             <div>
                 <Filters></Filters>
-                <div className="grid md:grid-cols-3  gap-3">
+                <div className="grid md:grid-cols-3 gap-3">
                     <EventCard />
                     <EventCard />
                     <EventCard />
@@ -16,8 +16,6 @@ export const EventsSection = () => {
                     <EventCard />
                 </div>
             </div>
-
-
         </section>
     )
 }

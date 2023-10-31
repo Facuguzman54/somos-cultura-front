@@ -1,12 +1,17 @@
+import Image from "next/image"
+import { CustomButton } from "./CustomButton"
+
+
 export const EventCard = () => {
     return (
-        <div className="w-full p-4 bg-white rounded-lg shadow-md">
-            <img className="w-full h-40 object-cover rounded-t-lg" alt="Card Image" src="https://via.placeholder.com/150"/>
+        <div className="w-full p-4 bg-white rounded-lg shadow-md relative">
+            <div className="absolute right-0 top-0 my-5 mx-5 bg-slate-50 p-1 rounded-lg" ><strong>Category</strong></div>
+            <Image width={0} height={0} className="min-w-full h-40 object-cover rounded-t-lg" alt="Card Image" src="https://via.placeholder.com/150"/>
                 <div className="p-4">
                     <h2 className="text-xl  font-semibold">Beautiful Card</h2>
                     <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ante sit amet tellus ornare tincidunt.</p>
                     <div className="flex justify-between items-center mt-4">
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">Learn More</button>
+                        <CustomButton label="Learn More"/>
                     </div>
                 </div>
         </div>

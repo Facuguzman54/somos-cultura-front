@@ -1,7 +1,8 @@
+import { LoginForm } from '@/components/LoginForm'
 import React from 'react'
 
 export default function Admin() {
   return (
-    <div>Login Admin</div>
+    <main className='min-h-[100vh] grid place-content-center'><LoginForm/></main>
   )
 }

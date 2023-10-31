@@ -1,13 +1,10 @@
 "use client"
 import { useState } from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import Link from "next/link"
 
 
 export const Nav = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
     const handleOpen = (e)=>{
         setOpen(prev => !prev)
     }
@@ -26,11 +23,11 @@ export const Nav = () => {
       
                 </div>
                 <div>
-                    <div className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden  ">
+                    <div className="text-3xl absolute right-8 top-[0.8rem] cursor-pointer md:hidden  ">
                     {
                         open ?
-                        <div className="flex h-full"><FontAwesomeIcon  className="w-4"  onClick={handleOpen} icon={faXmark} /> </div>
-                        :  <div className="flex h-full"><FontAwesomeIcon  className="w-4" onClick={handleOpen} icon={faBars}/> </div>  
+                        <div className="flex h-full"><span className="icon-[bi--x]" onClick={handleOpen}></span></div>
+                        :  <div className="flex h-full"><span className="icon-[bi--list]" onClick={handleOpen}></span> </div>  
                     }
                     </div>
                     <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-[-1] z-10 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-400 ease-in ${open ? "top-[4.02rem]":"top-[-490px]"}`}>

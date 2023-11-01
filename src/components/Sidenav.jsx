@@ -5,9 +5,9 @@ import { useState } from 'react';
 export const Sidenav = () => {
   const [open, setOpen] = useState(true)
   const MENUS = [
-    { title: "Eventos", src: "/BiFileRichtextFill.svg" },
-    { title: "Categorias", src: "/BiTagsFill.svg" },
-    { title: "Usuarios", src: "/BiPersonFillGear.svg", gap:true},
+    { title: "Eventos", src: "/BiFileRichtextFill.svg", href:"/dashboard/events" },
+    { title: "Categorias", src: "/BiTagsFill.svg", href:"/dashboard/categories"},
+    { title: "Usuarios", src: "/BiPersonFillGear.svg", href:"/dashboard/users",gap:true},
 
   ]
   return (
@@ -24,9 +24,11 @@ export const Sidenav = () => {
         </div>
         <ul className='pt-6'>
           {MENUS.map((menu) => (
-            <li key={menu.title} className={`text-gray-200 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-blue-900 rounded-md ${menu.gap ? "mt-9" : "mt-2"}`}>
+            <li key={menu.title} className={`text-gray-200 text-sm cursor-pointer p-2 hover:bg-blue-900 rounded-md ${menu.gap ? "mt-9" : "mt-2"}`}>
+              <Link href={menu.href} className='flex items-center gap-x-4 '>              
               <img src={menu.src} className='max-w-[30px]' />
               <span className={`${!open && "hidden"} origin-left duration-200`}>{menu.title}</span>
+              </Link>
             </li>
 
           ))}

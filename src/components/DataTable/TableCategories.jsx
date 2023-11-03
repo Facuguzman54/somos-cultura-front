@@ -6,7 +6,7 @@ import { DataGrid, esES} from '@mui/x-data-grid';
 
 const columns = [
 
-  { field: 'lastName', headerName: 'Nombre de la Categoria', flex:1, minWidth:150, headerClassName: "bg-indigo-500 text-white flex space-between"},
+  { field: 'lastName', headerName: 'Nombre de la Categoria', width:500, headerClassName:""},
 
 ];
 
